@@ -1,18 +1,18 @@
 import Race from './Race';
 
-export default class Dwarf extends Race {
+export default class Halfling extends Race {
   static instances = 0;
-  private maxLifePointsDwarf = 80;
+  private maxLifePointsHalfling = 60;
   constructor(name:string, dexterity: number) {
     super(name, dexterity);
-    Dwarf.instances += 1;
+    Halfling.instances += 1;
   }
 
   get maxLifePoints(): number {
-    return this.maxLifePointsDwarf;
+    return this.maxLifePointsHalfling;
   }
 
   static override createdRacesInstances():number {
-    return Dwarf.instances;
+    return Halfling.instances;
   }
 }
